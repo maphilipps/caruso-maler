@@ -1,0 +1,9 @@
+title: Referenzen
+template: references/show
+layout: layout
+mount: 8ba65ca8-8026-4835-ad72-6752b99bffa4
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

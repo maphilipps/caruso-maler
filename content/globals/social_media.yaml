@@ -1,0 +1,13 @@
+title: 'Social media'
+data:
+  social_media:
+    -
+      handle: mariocarusomalermeister
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true
+    -
+      handle: carusomalermeister
+      prefix: 'https://www.facebook.com/'
+      type: facebook
+      enabled: true

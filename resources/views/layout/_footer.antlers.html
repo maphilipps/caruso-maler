@@ -1,0 +1,70 @@
+{{#
+    @name Footer
+    @desc The sites footer rendered on each page.
+#}}
+
+<!-- /layout/_footer.antlers.html -->
+{{ if id != configuration:contact_page:id }}
+    <section class="outer-grid bg-primary-light">
+
+        <div class="fluid-container flex flex-row gap-8 items-center justify-center">
+            {{ heroicons:outline:chat-alt-2 class="h-24 stroke-current w-24" }}
+            <div class="flex flex-col justify-start items-start">
+                {{ partial:typography/h2 class="mb-4" content="Gerne beraten wir Sie persönlich, um das geeignete Setting für Ihren Event zu finden." }}
+                {{ partial:components/button :type="configuration:header_button_link_type" :label="configuration:header_button_label" :entry="configuration:header_button_entry" class="border-neutral text-neutral inline" inverted="true" }}
+            </div>
+        </div>
+    </section>
+{{ /if }}
+<footer class="w-full mt-auto">
+    <div class="bg-black">
+
+        <div class=" text-white text-sm md:grid md:grid-cols-3 px-8 py-16 fluid-container">
+            <div class="space-y-4">
+                {{ partial:typography/h3 class="mb-4" content="Adresse" color="text-white" }}
+                <p>
+                    Langestraße 27a <br>
+                    48165 Münster
+                </p>
+                <p>
+                    Tel. +49 2501 26 22 23 <br>
+                    Fax: +49 2501 92 87 75 <br>
+                    info@caruso-maler.de
+                </p>
+            </div>
+            <div class="space-y-4">
+                {{ partial:typography/h3 class="mb-4" content="Öffnungszeiten Büro" color="text-white" }}
+                <p>
+                    Montag - Freitag <br>
+                    7:30 - 13:00 Uhr
+                </p>
+            </div>
+        </div>
+    </div>
+    <div
+        class="fluid-container flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:space-x-4 md:items-center py-4 ">
+        <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 text-xs font-bold">
+            <span>
+                &copy; {{ configuration:copyright_since }}
+                {{ unless (now | format(orm)) == configuration:copyright_since }}
+                    - {{ now | format('Y') }}
+                {{ /unless }}
+                {{ configuration:copyright_name ?? config:app:name }}
+            </span>
+
+            {{# Let's users reset their cookie consent when you use the cookie banner. #}}
+            {{ yield:reset_cookie_consent }}
+        </div>
+        {{ if social_media:social_media }}
+            <div class="flex space-x-2">
+                {{ social_media:social_media }}
+                    <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
+                        href="{{ prefix }}{{ handle }}" rel="noopener"
+                        aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
+                        target="_blank">{{ svg :src="type" class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" }}</a>
+                {{ /social_media:social_media }}
+            </div>
+        {{ /if }}
+    </div>
+</footer>
+<!-- End: /layout/_footer.antlers.html -->

@@ -1,0 +1,12 @@
+title: Offers
+template: offers/show
+layout: layout
+mount: 390b8254-8d17-4788-a066-2c4eab3c1cf9
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false
+  max_depth: 1

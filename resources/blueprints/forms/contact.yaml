@@ -1,0 +1,60 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          display: Name
+          type: text
+          validate: required
+          localizable: true
+      -
+        handle: phone
+        field:
+          input_type: text
+          antlers: false
+          display: Telefonnummer
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          width: 50
+      -
+        handle: email
+        field:
+          display: E-Mail
+          type: text
+          validate: required|email
+          localizable: true
+          width: 50
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          input_type: text
+          antlers: false
+      -
+        handle: message_body
+        field:
+          display: 'Ihre Nachricht'
+          type: textarea
+          validate: required
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          antlers: false
+      -
+        handle: consent
+        field:
+          inline_label: 'Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der Datenschutzerklärung einverstanden.'
+          default: false
+          display: Einwilligung
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          validate:
+            - accepted
+          visibility: visible

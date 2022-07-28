@@ -1,0 +1,47 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        import: page_builder
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: images
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: Images
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: Referenzen

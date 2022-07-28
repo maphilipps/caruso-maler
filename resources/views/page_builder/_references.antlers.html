@@ -1,0 +1,32 @@
+<section class="fluid-container items-center justify-center flex flex-col space-y-8">
+    <div class="w-full flex flex-row">
+        <div class="flex-1">
+            {{ partial:typography/h2 :content="title" }}
+            {{ partial:typography/p :content="description" }}
+        </div>
+
+    </div>
+    <div class="grid md:grid-cols-3 rfs:gap-8 w-full ">
+        {{ entries }}
+            <article class="flex flex-col hover:-translate-y-2 duration-500 animate shadow-xl bg-secondary-light  skew-x-caruso overflow-hidden">
+                <a href="{{ url }}" class="aspect-w-12 aspect-h-7 -skew-x-caruso w-[120%] -ml-[10%]">
+                    {{ partial:components/picture :image="images.0" class="w-full" cover="true" lazy="true" sizes="
+                    {{switch(
+  (size == 'md') => '(min-width: 768px) 55vw, 90vw',
+  (size == 'lg') => '(min-width: 768px) 75vw, 90vw',
+  (size == 'xl') => '90vw',
+  () => '100vw')}}
+                    " }}
+                </a>
+                <div class="rfs:p-8 space-y-2 z-10 ">
+                                <div class="-skew-x-caruso">
+
+                    {{ partial:typography/h3 :content="title" }}
+                    {{ partial:typography/p :content="description" class="text-sm" }}
+                    </div>
+                </div>
+            </article>
+        {{ /entries }}
+    </div>
+    {{ partial:components/button :type="configuration:header_button_link_type" label="Mehr sehen" :entry="configuration:header_button_entry" class="border-neutral text-neutral" inverted="true" }}
+</section>

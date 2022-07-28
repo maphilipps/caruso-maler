@@ -1,0 +1,14 @@
+title: Configuration
+data:
+  error_404_entry: 059d4d8d-fc60-49f8-8823-7da10549e84e
+  copyright_since: 2016
+  privacy_statement_type: none
+  header_button_label: 'Termin vereinbaren'
+  header_button_link_type: entry
+  header_button_target_blank: false
+  header_button_entry: 5c526dbf-9dd7-4c52-98d8-54e00ebddfb6
+  header_button_button_type: button
+  header_button_attr_title: 'Termin vereinbaren'
+  header_button_attr_aria: 'Termin vereinbaren'
+  header_button_inverted: false
+  contact_page: 5c526dbf-9dd7-4c52-98d8-54e00ebddfb6
