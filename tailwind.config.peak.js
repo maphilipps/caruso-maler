@@ -176,11 +176,11 @@ module.exports = {
                     },
                     // Larger vertical spacing between blocks on larger screens.
                     '.outer-grid': {
-                        rowGap: theme('spacing.24'),
-                        paddingTop: theme('spacing.24'),
-                        paddingBottom: theme('spacing.24'),
+                        rowGap: theme('spacing.20'),
+                        paddingTop: theme('spacing.20'),
+                        paddingBottom: theme('spacing.20'),
                         '& > *:last-child.w-full': {
-                            marginBottom: `-${theme('spacing.24')}`,
+                            marginBottom: `-${theme('spacing.20')}`,
                         },
                     },
                 },

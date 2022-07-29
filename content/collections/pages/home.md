@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 7615fa59-f9ea-440e-ac6e-a2e3f2e8a579
-updated_at: 1659020222
+updated_at: 1659129457
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -51,7 +51,37 @@ page_builder:
                 inverted: true
     type: article
     enabled: true
-    section_class: 'bg-primary bg-opacity-50 prose-headings:text-neutral prose-p:text-neutral'
+    section_class: 'bg-primary-light prose-headings:text-neutral prose-p:text-neutral'
+  -
+    article:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'Wir sind stolz auf unsere Zertifizierungen!'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Wir sind Mitglied im Schimmelnetzwerk Münster\_\_\_"
+      -
+        type: set
+        attrs:
+          values:
+            type: figure
+            image: schimmelnetzwerk_mnster_logo_4c.jpg
+            size: md
+      -
+        type: paragraph
+        content:
+          -
+            type: hard_break
+    type: article
+    enabled: true
 banner_image: banners/img_2923.JPG
 banner_title: 'Ihr Meisterbetrieb in Münster'
 label: 'Erstgespräch vereinbaren'

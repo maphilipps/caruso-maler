@@ -22,3 +22,12 @@ Alpine.plugin(collapse)
 Alpine.plugin(persist)
 Alpine.plugin(focus)
 Alpine.start()
+
+window.addEventListener('load', (event) => {
+    // get element by href
+    document.querySelectorAll('[href*="kontakt"]').forEach(function (element) {
+        element.addEventListener('click', () => {
+            fathom.trackGoal('XJHHJ23F', 0);
+        });
+    });
+});
