@@ -1,20 +1,24 @@
 {{#
-    @name Footer
-    @desc The sites footer rendered on each page.
+@name Footer
+@desc The sites footer rendered on each page.
 #}}
 
 <!-- /layout/_footer.antlers.html -->
 {{ if id != configuration:contact_page:id }}
-    <section class="outer-grid bg-primary-light">
+<section class="outer-grid bg-primary-light">
 
-        <div class="fluid-container flex flex-row gap-8 items-center justify-center">
-            {{ heroicons:outline:chat-alt-2 class="h-24 stroke-current w-24" }}
-            <div class="flex flex-col justify-start items-start">
-                {{ partial:typography/h2 class="mb-4" content="Gerne beraten wir Sie persönlich, um das geeignete Setting für Ihren Event zu finden." }}
-                {{ partial:components/button :type="configuration:header_button_link_type" :label="configuration:header_button_label" :entry="configuration:header_button_entry" class="border-neutral text-neutral inline" inverted="true" }}
-            </div>
+    <div class="fluid-container flex flex-col md:flex-row gap-8 items-center justify-center">
+        {{ heroicons:outline:chat-alt-2 class="h-24 stroke-current w-24" }}
+        <div
+            class="flex flex-col justify-center items-center md:justify-start md:items-start text-center md:text-left ">
+            {{ partial:typography/h2 class="mb-4" content="Gerne beraten wir Sie persönlich, um das geeignete Setting
+            für Ihren Event zu finden." }}
+            {{ partial:components/button :type="configuration:header_button_link_type"
+            :label="configuration:header_button_label" :entry="configuration:header_button_entry" class="border-neutral
+            text-neutral inline" inverted="true" }}
         </div>
-    </section>
+    </div>
+</section>
 {{ /if }}
 <footer class="w-full mt-auto">
     <div class="bg-black">
@@ -56,14 +60,15 @@
             {{ yield:reset_cookie_consent }}
         </div>
         {{ if social_media:social_media }}
-            <div class="flex space-x-2">
-                {{ social_media:social_media }}
-                    <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
-                        href="{{ prefix }}{{ handle }}" rel="noopener"
-                        aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
-                        target="_blank">{{ svg :src="type" class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" }}</a>
-                {{ /social_media:social_media }}
-            </div>
+        <div class="flex space-x-2">
+            {{ social_media:social_media }}
+            <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
+               href="{{ prefix }}{{ handle }}" rel="noopener"
+               aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
+               target="_blank">{{ svg :src="type" class="w-3 h-3 overflow-visible fill-current" alt=""
+                aria-hidden="true" }}</a>
+            {{ /social_media:social_media }}
+        </div>
         {{ /if }}
     </div>
 </footer>
