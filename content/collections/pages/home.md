@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 7615fa59-f9ea-440e-ac6e-a2e3f2e8a579
-updated_at: 1659129457
+updated_at: 1659132312
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -61,7 +61,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Wir sind stolz auf unsere Zertifizierungen!'
+            text: 'Wir sind in allen Fragen für Sie da!'
       -
         type: paragraph
         content:
