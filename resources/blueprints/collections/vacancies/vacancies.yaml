@@ -1,0 +1,68 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          container: assets
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Stellenbeschreibung
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: requirements
+        field:
+          container: assets
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Anforderungen
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: additional_info
+        field:
+          container: assets
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Zusätzliche Bemerkung'
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: 'Offene Stellen'

@@ -45,6 +45,16 @@ fields:
           fields:
             -
               import: references
+        references_list:
+          display: 'References List'
+          fields:
+            -
+              import: references_list
+        vacancies_list:
+          display: 'Vacancies List'
+          fields:
+            -
+              import: vacancies
       instructions_position: above
       visibility: visible
       previews: true

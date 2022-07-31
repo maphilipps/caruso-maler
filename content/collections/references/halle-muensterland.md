@@ -50,12 +50,13 @@ page_builder:
     type: article
     enabled: true
 images:
+  - brooklyn-mo5qo9xpzha-unsplash.jpg
   - referenzen/halle_muen/02_l.jpg
   - referenzen/halle_muen/01_l.jpg
   - referenzen/halle_muen/03_l.jpg
   - referenzen/halle_muen/04_l.jpg
 updated_by: 7615fa59-f9ea-440e-ac6e-a2e3f2e8a579
-updated_at: 1659020177
+updated_at: 1659296719
 description: 'Tagungen, Konzerte, Kongresse in Münster. Die Halle Münsterland bietet den perfekten Rahmen.'
 published: true
 ---

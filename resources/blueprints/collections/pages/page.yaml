@@ -50,6 +50,17 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: layout
+        field:
+          hide_partials: true
+          blueprint: false
+          display: Layout
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+          visibility: visible
   banner:
     display: Banner
     fields:

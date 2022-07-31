@@ -9,7 +9,7 @@
     <div class="grid md:grid-cols-3 rfs:gap-8 w-full ">
         {{ entries }}
         <article
-            class="flex flex-col hover:-translate-y-2 duration-500 animate bg-secondary-light overflow-hidden">
+            class="flex flex-col hover:-translate-y-2 duration-500 animate {{ index % 2 == 0 ? 'bg-primary-light' : 'bg-secondary-light' }} overflow-hidden">
             <a href="{{ url }}" class="aspect-w-12 aspect-h-7">
                 {{ partial:components/picture :image="images.0" class="w-full" cover="true" lazy="true" sizes="
                 {{switch(
@@ -23,7 +23,6 @@
 
 
                     {{ partial:typography/h2 as="h3" :content="title" }}
-                    {{ partial:components/spacer }}
                     {{ partial:typography/p :content="description" class="text-sm" }}
 
             </div>

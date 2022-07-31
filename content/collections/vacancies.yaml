@@ -1,0 +1,9 @@
+title: Vacancies
+template: vacancies/index
+layout: layout
+mount: b36fdf01-4dac-4b9b-8cf2-692ad1e4d881
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

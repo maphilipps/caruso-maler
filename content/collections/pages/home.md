@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 7615fa59-f9ea-440e-ac6e-a2e3f2e8a579
-updated_at: 1659132312
+updated_at: 1659297205
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -51,7 +51,7 @@ page_builder:
                 inverted: true
     type: article
     enabled: true
-    section_class: 'bg-primary-light prose-headings:text-neutral prose-p:text-neutral'
+    section_class: 'bg-secondary-light prose-headings:text-neutral prose-p:text-neutral'
   -
     article:
       -

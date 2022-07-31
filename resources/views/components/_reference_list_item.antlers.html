@@ -1,0 +1,24 @@
+
+<div class="flex flex-col md:flex-row items-center {{ index % 2 == 0 ? 'justify-end' : 'justify-start' }} w-full relative ">
+    <div class="max-w-md w-full  p-8 z-10 md:absolute order-last md:order-none md:top-1/2 transform md:-translate-y-1/2 {{ index % 2 == 0 ? 'left-0 bg-primary-light' : 'right-0 bg-secondary-light' }} space-y-4">
+        {{ partial:typography/h2 as="h3" :content="title" }}
+        {{ partial:typography/p :content="description" }}
+    </div>
+    <div class="w-full aspect-w-3 md:aspect-w-5 aspect-h-2 max-w-2xl">
+        {{
+        partial:components/picture
+        :image="images.0"
+        class="w-full h-full shadow-xl"
+        cover="true"
+        lazy="true"
+        sizes="
+        {{ switch(
+        (size == 'md') => '(min-width: 768px) 55vw, 90vw',
+        (size == 'lg') => '(min-width: 768px) 75vw, 90vw',
+        (size == 'xl') => '90vw',
+        () => '100vw'
+        )}}
+        "
+        }}
+    </div>
+</div>
