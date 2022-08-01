@@ -1,0 +1,38 @@
+{{#
+@name Main mobile navigation
+@desc The sites main mobile navigation rendered on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
+#}}
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    x-data="{ getInTouchOpen: false }"
+    aria-label="{{ trans:strings.main_navigation }}"
+    x-cloak
+>
+    <button
+        @click.prevent="getInTouchOpen = !getInTouchOpen"
+        class=" fixed bottom-0 right-0 mb-safe mr-safe z-40 flex items-center justify-center w-16 h-16 bg-secondary-light text-white rounded-full"
+        :aria-label="
+        getInTouchOpen
+            ? '{{ trans:strings.nav_close }}'
+            : '{{ trans:strings.nav_open }}'
+        "
+        :aria-expanded="getInTouchOpen"
+        x-transition.scale.10
+        x-transition.duration.200ms
+
+    > {{ heroicons:outline:chat-alt-2 class="h-12 stroke-current text-neutral
+        w-12" }}
+    </button>
+
+    <div
+        class="fixed inset-0 z-30 pt-8 px-8 pb-12 flex flex-col justify-end bg-white"
+        x-show="getInTouchOpen"
+        x-transition.duration.500ms
+        x-transition.scale.20
+        x-trap.inert.noscroll="getInTouchOpen"
+    >
+      Hier kommen nochmal die Kontaktdaten hin :-)
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->

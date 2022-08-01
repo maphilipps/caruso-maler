@@ -30,7 +30,6 @@ inline-flex items-center py-3 px-4 border-4 leading-none uppercase tracking-wide
 {{ class }}
 "
 {{ trackGoal ?= "onclick='window.fathom.trackGoal('{trackGoal}', 0)'" }}
-
 {{ !faux ?= { partial:snippets/button_attributes } }}
 >
 {{ link_type == 'email' ? { label | obfuscate_email } : label }}

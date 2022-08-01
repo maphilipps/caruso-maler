@@ -1,12 +1,16 @@
-<div class="fluid-container">
+<div class="fluid-container rfs:py-8">
     {{ collection:vacancies }}
-    <div class="max-w-2xl">
+    <div class="max-w-2xl ">
         {{ partial:typography/h2 :content="title" }}
         {{ partial:typography/p :content="description" }}
         {{ partial:typography/h3 content="Wir erwarten" }}
         {{ partial:typography/p :content="requirements" }}
         {{ partial:typography/h3 content="Anmerkung" }}
         {{ partial:typography/p :content="additional_info" }}
+        <div class="flex bg-secondary-light p-8">
+
+        </div>
     </div>
     {{ /collection:vacancies }}
+
 </div>
