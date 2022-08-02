@@ -11,7 +11,7 @@
 >
     <button
         @click.prevent="getInTouchOpen = !getInTouchOpen"
-        class=" fixed bottom-0 right-0 mb-safe mr-safe z-40 flex items-center justify-center w-16 h-16 bg-secondary-light text-white rounded-full"
+        class=" fixed bottom-0 right-0 mb-safe mr-safe z-40 flex items-center justify-center p-4 bg-secondary-light text-neutral rounded-full"
         :aria-label="
         getInTouchOpen
             ? '{{ trans:strings.nav_close }}'
@@ -21,18 +21,27 @@
         x-transition.scale.10
         x-transition.duration.200ms
 
-    > {{ heroicons:outline:phone class="h-12 stroke-current text-neutral
-        w-12" }}
+    > {{ heroicons:outline:phone class="h-4 -ml-2 stroke-current
+        w-12" }} <span class="uppercase font-bold">Beratung</span>
     </button>
 
     <div
-        class="fixed inset-0 z-30 pt-8 px-8 pb-12 flex flex-col justify-end bg-white"
+        class="fixed inset-0 z-30  flex flex-col justify-end bg-white"
         x-show="getInTouchOpen"
         x-transition.duration.500ms
         x-transition.scale.20
         x-trap.inert.noscroll="getInTouchOpen"
     >
-      Hier kommen nochmal die Kontaktdaten hin :-)
+        <div class="flex flex-row h-full w-full">
+            <div class="flex-1 bg-primary-light pt-8 px-8 pb-12 flex justify-center flex flex-col space-y-8">
+                {{ partial:typography/h1 as="h3" content="Beratungstermin vereinbaren" }}
+                <div class="flex flex-row text-xl font-bold items-center">
+                    {{ heroicons:outline:phone class="h-10 mr-8 stroke-current
+                    w-10" }} {{configuration:telephone}}
+                </div>
+            </div>
+
+        </div>
     </div>
 </nav>
 <!-- End: /navigation/_main_mobile.antlers.html -->
